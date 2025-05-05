@@ -1,6 +1,6 @@
-# Discord Webhook Logger
+# Discord Logger Plus
 
-Discord Webhook Logger는 실시간 로그 알림과 선택적으로 Supabase 데이터베이스 저장을 지원하는 Python 로깅 라이브러리예요.
+Discord Logger Plus는 실시간 로그 알림과 선택적으로 Supabase 데이터베이스 저장을 지원하는 Python 로깅 라이브러리예요.
 
 ## 특징
 
@@ -15,7 +15,7 @@ Discord Webhook Logger는 실시간 로그 알림과 선택적으로 Supabase �
 ## 빠른 시작
 
 ```python
-from webhook_warning import Logger, LogLevel
+from discord_logger_plus import Logger, LogLevel
 
 # 로거 초기화 (Discord 웹훅만 사용)
 logger = Logger(
@@ -89,7 +89,7 @@ Logger(
 ### 커스텀 템플릿
 
 ```python
-from webhook_warning import Logger, LogLevel, LogEmbedTemplate
+from discord_logger_plus import Logger, LogLevel, LogEmbedTemplate
 
 # 커스텀 템플릿 생성
 error_template = LogEmbedTemplate(
@@ -111,7 +111,7 @@ logger.set_template(LogLevel.ERROR, error_template)
 
 ```python
 import asyncio
-from webhook_warning import Logger
+from discord_logger_plus import Logger
 
 async def main():
     logger = Logger("my_app")
